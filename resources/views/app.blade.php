@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
 </head>
 <body>
-    <div id="app">
-        <h1>Navbar</h1>
-        <router-link to="/">Home</router-link>
-        <router-link to="/users">Users</router-link>
-        <router-view></router-view>
-        
-        {{-- Content --}}
-        @yield('content')
+    <div class="font-sans tracking-wide md:tracking-wider text-gray-800 flex flex-col min-h-screen" id="app">
+        {{-- Header component --}}
+        <hd></hd>
+        <div class="flex-grow leading-relaxed mt-18 mb-6">
+            <router-link to="/">Home</router-link>
+            <router-link to="/users">Users</router-link>
+            <router-view></router-view>
+            @yield('content')
+        </div>
+
+        {{-- Footer component --}}
+        <ft></ft>
     </div>
     <script src="{{mix('js/app.js')}}"></script>
 </body>
