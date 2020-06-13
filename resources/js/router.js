@@ -3,7 +3,9 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 import Home from "./components/Home";
-import Users from "./components/Users";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Portfolio from "./components/Portfolio";
 
 const router = new VueRouter({
     mode: "history",
@@ -14,9 +16,19 @@ const router = new VueRouter({
             component: Home
         },
         {
-            path: "/users",
-            name: "users",
-            component: Users
+            path: "/about",
+            name: "about",
+            component: About
+        },
+        {
+            path: "/contact",
+            name: "contact",
+            component: Contact
+        },
+        {
+            path: "/portfolio",
+            name: "portfolio",
+            component: Portfolio
         }
     ]
 });

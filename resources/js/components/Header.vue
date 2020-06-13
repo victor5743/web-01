@@ -5,7 +5,8 @@
             <!-- Navbar options - Medium Desktop -->
             <div class="flex justify-between items-center ">
                 <!-- Logo -->
-                <a
+                <router-link
+                    to="/"
                     class="flex items-center font-raleway font-medium font-semibold text-2xl ml-6"
                     href="/"
                 >
@@ -15,7 +16,7 @@
                         alt="Logo"
                     />
                     Web page
-                </a>
+                </router-link>
 
                 <!-- Navbar options -->
                 <div class="hidden sm:block">
@@ -23,13 +24,13 @@
                         class="flex uppercase tracking-wide font-bold items-center"
                     >
                         <li class="mr-2 my-2 pr-3 rounded-md ml-4">
-                            <a href="about">Who I am</a>
+                            <router-link to="/about">About me</router-link>
                         </li>
                         <li class="mr-2 my-2 pr-3 rounded-md ml-4">
-                            <a href="portfolio">Portfolio</a>
+                            <router-link to="/portfolio">Portfolio</router-link>
                         </li>
                         <li class="mr-2 my-2 pr-3 rounded-md ml-4">
-                            <a href="contact">Contact</a>
+                            <router-link to="/contact">Contact</router-link>
                         </li>
                     </ul>
                 </div>
