@@ -13,24 +13,34 @@ const router = new VueRouter({
         {
             path: "/",
             name: "home",
-            component: Home
+            component: Home,
+            meta: { title: "Home" }
         },
         {
             path: "/about",
             name: "about",
-            component: About
+            component: About,
+            meta: { title: "About" }
         },
         {
             path: "/contact",
             name: "contact",
-            component: Contact
+            component: Contact,
+            meta: { title: "Contact" }
         },
         {
             path: "/portfolio",
             name: "portfolio",
-            component: Portfolio
+            component: Portfolio,
+            meta: { title: "Portfolio" }
         }
     ]
+});
+
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title;
+
+    next();
 });
 
 export default router;

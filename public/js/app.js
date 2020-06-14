@@ -2072,6 +2072,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37712,6 +37734,7 @@ var staticRenderFns = [
         staticClass: "w-auto h-auto md:h-64 md:w-128 mb-6 mx-auto",
         attrs: {
           src: "https://www.youtube.com/embed/uHo6o1TNQeE",
+          SameSite: "None",
           frameborder: "0",
           allow:
             "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
@@ -37985,95 +38008,114 @@ var render = function() {
   return _c("div", { staticClass: "w-full fixed shadow bg-white" }, [
     _c("div", { staticClass: "bg-blue h-4" }),
     _vm._v(" "),
-    _c("nav", { staticClass: "py-2" }, [
-      _c(
-        "div",
-        { staticClass: "flex justify-between items-center " },
-        [
-          _c(
-            "router-link",
-            {
-              staticClass:
-                "flex items-center font-raleway font-medium font-semibold text-2xl ml-6",
-              attrs: { to: "/", href: "/" }
-            },
-            [
-              _c("img", {
-                staticClass: "h-10 w-10",
-                attrs: { src: __webpack_require__(/*! ../../img/logo.png */ "./resources/img/logo.png"), alt: "Logo" }
-              }),
-              _vm._v("\n                Web page\n            ")
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "hidden sm:block" }, [
+    _vm.isOpen
+      ? _c("button", {
+          staticClass:
+            "fixed top-0 right-0 left-0 bottom-0 w-full h-full cursor-default z-0  mt-18",
+          on: {
+            click: function($event) {
+              _vm.isOpen = false
+            }
+          }
+        })
+      : _vm._e(),
+    _vm._v(" "),
+    _c("nav", { staticClass: "py-2 relative" }, [
+      _c("div", { staticClass: "flex justify-between items-center" }, [
+        _c(
+          "div",
+          {
+            on: {
+              click: function($event) {
+                _vm.isOpen = false
+              }
+            }
+          },
+          [
             _c(
-              "ul",
+              "router-link",
               {
                 staticClass:
-                  "flex uppercase tracking-wide font-bold items-center"
+                  "flex items-center font-raleway font-medium font-semibold text-2xl ml-6",
+                attrs: { to: "/", href: "/" }
               },
               [
-                _c(
-                  "li",
-                  { staticClass: "mr-2 my-2 pr-3 rounded-md ml-4" },
-                  [
-                    _c("router-link", { attrs: { to: "/about" } }, [
-                      _vm._v("About me")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "mr-2 my-2 pr-3 rounded-md ml-4" },
-                  [
-                    _c("router-link", { attrs: { to: "/portfolio" } }, [
-                      _vm._v("Portfolio")
-                    ])
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "mr-2 my-2 pr-3 rounded-md ml-4" },
-                  [
-                    _c("router-link", { attrs: { to: "/contact" } }, [
-                      _vm._v("Contact")
-                    ])
-                  ],
-                  1
-                )
+                _c("img", {
+                  staticClass: "h-10 w-10",
+                  attrs: { src: __webpack_require__(/*! ../../img/logo.png */ "./resources/img/logo.png"), alt: "Logo" }
+                }),
+                _vm._v("\n                    Web page\n                ")
               ]
             )
-          ]),
-          _vm._v(" "),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "hidden sm:block" }, [
           _c(
-            "svg",
+            "ul",
             {
-              staticClass:
-                "h-6 w-6 sm:hidden mr-6 text-gray-800 fill-current cursor-pointer",
-              attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 20 20"
-              },
-              on: {
-                click: function($event) {
-                  _vm.isOpen = !_vm.isOpen
-                }
-              }
+              staticClass: "flex uppercase tracking-wide font-bold items-center"
             },
             [
-              _c("path", {
-                attrs: { d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" }
-              })
+              _c(
+                "li",
+                { staticClass: "mr-2 my-2 pr-3 rounded-md ml-4" },
+                [
+                  _c("router-link", { attrs: { to: "/about" } }, [
+                    _vm._v("About me")
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "mr-2 my-2 pr-3 rounded-md ml-4" },
+                [
+                  _c("router-link", { attrs: { to: "/portfolio" } }, [
+                    _vm._v("Portfolio")
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "mr-2 my-2 pr-3 rounded-md ml-4" },
+                [
+                  _c("router-link", { attrs: { to: "/contact" } }, [
+                    _vm._v("Contact")
+                  ])
+                ],
+                1
+              )
             ]
           )
-        ],
-        1
-      ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "svg",
+          {
+            staticClass:
+              "h-6 w-6 sm:hidden mr-6 text-gray-800 fill-current cursor-pointer",
+            attrs: {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 20 20"
+            },
+            on: {
+              click: function($event) {
+                _vm.isOpen = !_vm.isOpen
+              }
+            }
+          },
+          [
+            _c("path", {
+              attrs: { d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" }
+            })
+          ]
+        )
+      ]),
       _vm._v(" "),
       _c("div", [
         _vm.isOpen
@@ -38083,39 +38125,74 @@ var render = function() {
                 staticClass:
                   "uppercase tracking-wide font-bold items-center text-right"
               },
-              [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)]
+              [
+                _c(
+                  "li",
+                  {
+                    staticClass: "mr-2 my-2 pr-3 rounded-md ml-4",
+                    on: {
+                      click: function($event) {
+                        _vm.isOpen = false
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "block", attrs: { to: "/about" } },
+                      [_vm._v("About me")]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    staticClass: "mr-2 my-2 pr-3 rounded-md ml-4",
+                    on: {
+                      click: function($event) {
+                        _vm.isOpen = false
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "block", attrs: { to: "/portfolio" } },
+                      [_vm._v("Portfolio")]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {
+                    staticClass: "mr-2 my-2 pr-3 rounded-md ml-4",
+                    on: {
+                      click: function($event) {
+                        _vm.isOpen = false
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "block", attrs: { to: "/contact" } },
+                      [_vm._v("Contact")]
+                    )
+                  ],
+                  1
+                )
+              ]
             )
           : _vm._e()
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mr-2 my-2 pr-3 rounded-md ml-4" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Who I am")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mr-2 my-2 pr-3 rounded-md ml-4" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Portfolio")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mr-2 my-2 pr-3 rounded-md ml-4" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Contact")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -53980,20 +54057,36 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: "/",
     name: "home",
-    component: _components_Home__WEBPACK_IMPORTED_MODULE_2__["default"]
+    component: _components_Home__WEBPACK_IMPORTED_MODULE_2__["default"],
+    meta: {
+      title: "Home"
+    }
   }, {
     path: "/about",
     name: "about",
-    component: _components_About__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _components_About__WEBPACK_IMPORTED_MODULE_3__["default"],
+    meta: {
+      title: "About"
+    }
   }, {
     path: "/contact",
     name: "contact",
-    component: _components_Contact__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _components_Contact__WEBPACK_IMPORTED_MODULE_4__["default"],
+    meta: {
+      title: "Contact"
+    }
   }, {
     path: "/portfolio",
     name: "portfolio",
-    component: _components_Portfolio__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _components_Portfolio__WEBPACK_IMPORTED_MODULE_5__["default"],
+    meta: {
+      title: "Portfolio"
+    }
   }]
+});
+router.beforeEach(function (to, from, next) {
+  document.title = to.meta.title;
+  next();
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
 

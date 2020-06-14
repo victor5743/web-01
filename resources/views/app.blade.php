@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="descripton" content="Web Page using Vue and Laravel">
-    <title>Home</title>
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    <title>Home</title>
 </head>
 <body>
     <div 
@@ -16,8 +17,9 @@
         {{-- Header component --}}
         <hd></hd>
 
-        <div class="flex-grow leading-relaxed mt-18 mb-6 items-center">
-						<router-view></router-view>
+        {{-- Content --}}
+        <div class="flex-grow leading-relaxed mt-18 mb-6 items-center" @click="isOpen = false">
+			<router-view></router-view>
         </div>
 
         {{-- Footer component --}}

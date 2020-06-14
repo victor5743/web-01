@@ -1,22 +1,29 @@
 <template>
     <div class="w-full fixed shadow bg-white">
         <div class="bg-blue h-4"></div>
-        <nav class="py-2">
+        <button
+            v-if="isOpen"
+            @click="isOpen = false"
+            class="fixed top-0 right-0 left-0 bottom-0 w-full h-full cursor-default z-0  mt-18"
+        ></button>
+        <nav class="py-2 relative">
             <!-- Navbar options - Medium Desktop -->
-            <div class="flex justify-between items-center ">
+            <div class="flex justify-between items-center">
                 <!-- Logo -->
-                <router-link
-                    to="/"
-                    class="flex items-center font-raleway font-medium font-semibold text-2xl ml-6"
-                    href="/"
-                >
-                    <img
-                        class="h-10 w-10"
-                        src="../../img/logo.png"
-                        alt="Logo"
-                    />
-                    Web page
-                </router-link>
+                <div @click="isOpen = false">
+                    <router-link
+                        to="/"
+                        class="flex items-center font-raleway font-medium font-semibold text-2xl ml-6"
+                        href="/"
+                    >
+                        <img
+                            class="h-10 w-10"
+                            src="../../img/logo.png"
+                            alt="Logo"
+                        />
+                        Web page
+                    </router-link>
+                </div>
 
                 <!-- Navbar options -->
                 <div class="hidden sm:block">
@@ -52,14 +59,29 @@
                     v-if="isOpen"
                     class="uppercase tracking-wide font-bold items-center text-right"
                 >
-                    <li class="mr-2 my-2 pr-3 rounded-md ml-4">
-                        <a href="#">Who I am</a>
+                    <li
+                        class="mr-2 my-2 pr-3 rounded-md ml-4"
+                        @click="isOpen = false"
+                    >
+                        <router-link class="block" to="/about"
+                            >About me</router-link
+                        >
                     </li>
-                    <li class="mr-2 my-2 pr-3 rounded-md ml-4">
-                        <a href="#">Portfolio</a>
+                    <li
+                        class="mr-2 my-2 pr-3 rounded-md ml-4"
+                        @click="isOpen = false"
+                    >
+                        <router-link class="block" to="/portfolio"
+                            >Portfolio</router-link
+                        >
                     </li>
-                    <li class="mr-2 my-2 pr-3 rounded-md ml-4">
-                        <a href="#">Contact</a>
+                    <li
+                        class="mr-2 my-2 pr-3 rounded-md ml-4"
+                        @click="isOpen = false"
+                    >
+                        <router-link class="block" to="/contact"
+                            >Contact</router-link
+                        >
                     </li>
                 </ul>
             </div>

@@ -22,6 +22,7 @@
         <iframe
             class="w-auto h-auto md:h-64 md:w-128 mb-6 mx-auto"
             src="https://www.youtube.com/embed/uHo6o1TNQeE"
+            SameSite="None"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
