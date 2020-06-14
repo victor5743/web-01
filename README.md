@@ -1,6 +1,6 @@
 # web-01
 
-Responsive Página web spa usando Vue, Vue Router y Laravel.
+Responsive website using, Vue, Vue Router, and Laravel.
 
 ## Application preview:
 
